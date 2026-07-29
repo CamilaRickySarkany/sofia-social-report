@@ -535,6 +535,41 @@
   </div>
 </div>
 
+<!-- IG FOLLOWS / UNFOLLOWS -->
+<div class="section">
+  <div class="platform-badge ig"><span class="platform-dot"></span> Instagram · @sofia.sarkany</div>
+  <p class="section-label">23 – 27 Jul 2026 · diario</p>
+  <h2 class="section-title pink">Follows &amp; Unfollows <span>diarios</span></h2>
+  <div class="section-divider pink"></div>
+  <div class="chart-container" style="margin-bottom:48px">
+    <p class="chart-title">Nuevos seguidores vs. Unfollows estimados · 23–27 Jul</p>
+    <div class="chart-wrap" style="height:260px"><canvas id="followsChart"></canvas></div>
+  </div>
+  <div class="kpi-grid" style="margin-bottom:0">
+    <div class="kpi-card">
+      <div class="kpi-label">Total Follows (sem.)</div>
+      <div class="kpi-value" style="font-size:28px">225</div>
+      <div class="kpi-wow neutral">23 – 27 Jul</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Total Unfollows est. (sem.)</div>
+      <div class="kpi-value" style="font-size:28px">390</div>
+      <div class="kpi-wow down">estimado · API combinada</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Neto acumulado (sem.)</div>
+      <div class="kpi-value" style="font-size:28px;color:var(--down)">−165</div>
+      <div class="kpi-wow down">pérdida neta de audiencia</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Peor día</div>
+      <div class="kpi-value" style="font-size:28px">26/07</div>
+      <div class="kpi-wow down">−45 neto · 94 unfollows est.</div>
+    </div>
+  </div>
+  <p style="font-size:11px;color:var(--muted);margin-top:16px">* Unfollows estimados = follows_and_unfollows (API Instagram) − nuevos seguidores del día. Dato de carácter orientativo.</p>
+</div>
+
 <!-- TOP POSTS IG -->
 <div class="section">
   <p class="section-label">Top contenido · Jul 21–27</p>
@@ -922,6 +957,69 @@ new Chart(document.getElementById('ttTrendChart'), {
     scales: {
       x: { grid: { color: '#1C1C1C' } },
       y: { grid: { color: '#1C1C1C' }, ticks: { callback: v => v >= 1000 ? (v/1000).toFixed(0)+'K' : v } }
+    }
+  }
+});
+
+// Follows & Unfollows @sofia.sarkany
+new Chart(document.getElementById('followsChart'), {
+  type: 'line',
+  data: {
+    labels: ['23/07','24/07','25/07','26/07','27/07'],
+    datasets: [
+      {
+        label: 'Follows',
+        data: [49, 46, 42, 49, 39],
+        borderColor: '#E91E8C',
+        backgroundColor: 'rgba(233,30,140,0.08)',
+        borderWidth: 2,
+        pointBackgroundColor: '#E91E8C',
+        pointRadius: 5,
+        tension: 0.3,
+        fill: false
+      },
+      {
+        label: 'Unfollows (est.)',
+        data: [80, 71, 63, 94, 82],
+        borderColor: '#FF4444',
+        backgroundColor: 'rgba(255,68,68,0.06)',
+        borderWidth: 2,
+        borderDash: [6, 3],
+        pointBackgroundColor: '#FF4444',
+        pointRadius: 4,
+        tension: 0.3,
+        fill: false
+      },
+      {
+        label: 'Neto',
+        data: [-31, -25, -21, -45, -43],
+        borderColor: '#555',
+        backgroundColor: 'transparent',
+        borderWidth: 1.5,
+        borderDash: [3, 3],
+        pointBackgroundColor: '#555',
+        pointRadius: 3,
+        tension: 0.3,
+        fill: false
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: { padding: 16, boxWidth: 10, font: { size: 10 } }
+      }
+    },
+    scales: {
+      x: { grid: { color: '#1C1C1C' } },
+      y: {
+        grid: { color: '#1C1C1C' },
+        ticks: { callback: v => (v >= 0 ? '' : '−') + Math.abs(v) }
+      }
     }
   }
 });
