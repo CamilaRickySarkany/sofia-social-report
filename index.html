@@ -3,1072 +3,670 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOFÍA · Reporte Semanal Social Media — Semana 28 Sep–4 Oct 2026</title>
+<title>SOFÃA Â· Reporte Semanal Social Media â Semana 13â19 Oct 2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
 <style>
-  :root {
-    --bg: #0C0C0C;
-    --gold: #E8C170;
-    --pink: #E91E8C;
-    --tiktok: #FE2C55;
-    --surface: #141414;
-    --border: #2A2A2A;
-    --text: #F0F0F0;
-    --muted: #666;
-    --up: #4CAF50;
-    --down: #F44336;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.5; }
-  
-  /* ── COVER ── */
-  .cover {
-    background: linear-gradient(135deg, #0C0C0C 0%, #1a0a10 50%, #0C0C0C 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 48px 40px 40px;
-  }
-  .cover-brand {
-    font-size: 11px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--pink);
-    margin-bottom: 8px;
-  }
-  .cover-title {
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .cover-period {
-    font-size: 13px;
-    color: var(--muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-  }
-  .cover-kpis {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .cover-kpi {
-    background: var(--surface);
-    padding: 24px 20px;
-    text-align: center;
-  }
-  .cover-kpi .label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-  .cover-kpi .value {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -1px;
-  }
-  .cover-kpi.ig .value { color: var(--pink); }
-  .cover-kpi.tt .value { color: var(--tiktok); }
-  .cover-kpi.neutral .value { color: var(--gold); }
-  .cover-kpi .sub {
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 4px;
-  }
+:root {
+  --bg: #0C0C0C;
+  --gold: #E8C170;
+  --pink: #E91E8C;
+  --tiktok: #FE2C55;
+  --surface: #141414;
+  --border: #2A2A2A;
+  --text: #F0F0F0;
+  --muted: #666;
+  --up: #4CAF50;
+  --down: #F44336;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.5; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-  /* ── SECTIONS ── */
-  .section {
-    padding: 40px;
-    border-bottom: 1px solid var(--border);
-  }
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-  .section-tag {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 2px;
-  }
-  .tag-ig { background: rgba(233,30,140,0.15); color: var(--pink); border: 1px solid rgba(233,30,140,0.3); }
-  .tag-tt { background: rgba(254,44,85,0.15); color: var(--tiktok); border: 1px solid rgba(254,44,85,0.3); }
-  .tag-bm { background: rgba(232,193,112,0.15); color: var(--gold); border: 1px solid rgba(232,193,112,0.3); }
-  .tag-aud { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border); }
-  .section-title {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text);
-  }
+/* COVER */
+.cover {
+  background: linear-gradient(135deg, #0C0C0C 0%, #1a0a18 50%, #0C0C0C 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 60px 0 50px;
+  text-align: center;
+}
+.cover-logo { letter-spacing: 0.25em; font-size: 11px; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
+.cover h1 { font-size: 42px; font-weight: 200; letter-spacing: 0.15em; color: var(--text); margin-bottom: 4px; }
+.cover-subtitle { font-size: 13px; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 40px; }
+.cover-kpis { display: flex; justify-content: center; gap: 0; flex-wrap: wrap; margin-top: 20px; }
+.cover-kpi { padding: 20px 32px; border-left: 1px solid var(--border); }
+.cover-kpi:first-child { border-left: none; }
+.cover-kpi-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.cover-kpi-value { font-size: 28px; font-weight: 300; }
+.cover-kpi-value.ig { color: var(--pink); }
+.cover-kpi-value.tt { color: var(--tiktok); }
+.cover-kpi-value.gold { color: var(--gold); }
+.cover-kpi-badge { font-size: 11px; margin-top: 4px; }
+.badge-up { color: var(--up); }
+.badge-down { color: var(--down); }
 
-  /* ── KPI GRID ── */
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 32px;
-  }
-  .kpi-card {
-    background: var(--surface);
-    padding: 20px 18px;
-  }
-  .kpi-card .kpi-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-  .kpi-card .kpi-value {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: var(--text);
-  }
-  .kpi-card .kpi-wow {
-    font-size: 12px;
-    margin-top: 4px;
-    font-weight: 500;
-  }
-  .wow-up { color: var(--up); }
-  .wow-down { color: var(--down); }
-  .wow-neutral { color: var(--muted); }
+/* SECTIONS */
+.section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+.section-tag { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+.section-title { font-size: 18px; font-weight: 300; letter-spacing: 0.06em; }
+.section-line { flex: 1; height: 1px; background: var(--border); }
 
-  /* ── CHARTS ── */
-  .charts-row {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    margin-bottom: 0;
-  }
-  .chart-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 24px;
-  }
-  .chart-box h3 {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 20px;
-  }
-  .chart-container { position: relative; }
+/* KPI GRID */
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 28px; }
+.kpi-card { background: var(--surface); padding: 20px 16px; }
+.kpi-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.kpi-val { font-size: 24px; font-weight: 300; color: var(--text); }
+.kpi-wow { font-size: 11px; margin-top: 4px; }
 
-  /* ── FOLLOWS GRID ── */
-  .follows-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-  .follows-note {
-    font-size: 11px;
-    color: var(--muted);
-    padding: 12px 0;
-    border-top: 1px solid var(--border);
-    line-height: 1.6;
-  }
+/* CHARTS */
+.charts-row { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 24px; }
+.chart-box { background: var(--surface); border: 1px solid var(--border); padding: 20px; }
+.chart-box h3 { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+.chart-box canvas { max-height: 200px; }
 
-  /* ── POSTS / VIDEOS ── */
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  .post-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-  }
-  .post-rank {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--pink);
-    color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-  }
-  .post-rank.tt-rank { background: var(--tiktok); }
-  .post-thumb {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    background: #1e1e1e;
-    display: block;
-  }
-  .post-thumb-placeholder {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background: linear-gradient(135deg, #1a0a10 0%, #141414 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .post-thumb-placeholder span {
-    font-size: 32px;
-    opacity: 0.3;
-  }
-  .post-info {
-    padding: 14px 16px;
-  }
-  .post-caption {
-    font-size: 12px;
-    color: var(--muted);
-    margin-bottom: 12px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    line-height: 1.5;
-  }
-  .post-stats {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-  .post-stat {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .post-stat .stat-val {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .post-stat .stat-key {
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .post-link {
-    display: block;
-    margin-top: 12px;
-    font-size: 11px;
-    color: var(--pink);
-    text-decoration: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  .post-link.tt-link { color: var(--tiktok); }
-  .post-link:hover { opacity: 0.7; }
-  .post-type-badge {
-    display: inline-block;
-    font-size: 9px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 2px 8px;
-    border-radius: 2px;
-    margin-bottom: 8px;
-  }
-  .badge-carousel { background: rgba(233,30,140,0.15); color: var(--pink); }
-  .badge-reel { background: rgba(255,100,0,0.15); color: #FF6400; }
-  .badge-image { background: rgba(232,193,112,0.15); color: var(--gold); }
-  .badge-tiktok { background: rgba(254,44,85,0.15); color: var(--tiktok); }
+/* POSTS / VIDEOS */
+.posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.post-card { background: var(--surface); border: 1px solid var(--border); padding: 16px; display: flex; gap: 14px; align-items: flex-start; }
+.post-thumb { width: 64px; height: 64px; object-fit: cover; background: #222; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--muted); border: 1px solid var(--border); }
+.post-thumb img { width: 64px; height: 64px; object-fit: cover; }
+.post-info { flex: 1; min-width: 0; }
+.post-type { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.post-caption { font-size: 12px; color: var(--text); margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.post-stats { display: flex; gap: 12px; font-size: 11px; color: var(--muted); flex-wrap: wrap; }
+.post-stat strong { color: var(--text); }
+.post-link { font-size: 10px; color: var(--pink); text-decoration: none; letter-spacing: 0.06em; margin-top: 6px; display: inline-block; }
+.post-rank { font-size: 22px; font-weight: 200; color: var(--border); flex-shrink: 0; line-height: 1; padding-top: 4px; }
 
-  /* ── BENCHMARK ── */
-  .bm-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 24px;
-  }
-  .bm-table th {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-align: left;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--border);
-  }
-  .bm-table td {
-    padding: 14px 16px;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-  }
-  .bm-table tr:last-child td { border-bottom: none; }
-  .bm-table tr.highlight td { background: rgba(233,30,140,0.05); }
-  .acct-name {
-    font-weight: 600;
-    color: var(--text);
-  }
-  .acct-name.sofia { color: var(--pink); }
+/* BENCHMARK */
+.bench-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.bench-table th { text-align: left; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--border); font-weight: normal; }
+.bench-table td { padding: 12px 12px; border-bottom: 1px solid var(--border); font-size: 13px; }
+.bench-table tr:last-child td { border-bottom: none; }
+.bench-table tr:hover td { background: var(--surface); }
+.bench-name { color: var(--gold); letter-spacing: 0.04em; }
 
-  /* ── CONCLUSIONS ── */
-  .conclusions-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-  }
-  .conclusion-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 20px;
-  }
-  .conclusion-num {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--pink);
-    opacity: 0.4;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
-  .conclusion-title {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-  }
-  .conclusion-text {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
+/* CONCLUSIONES */
+.conclusions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.conclusion-card { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 18px 16px; }
+.conclusion-num { font-size: 32px; font-weight: 200; color: var(--border); line-height: 1; margin-bottom: 8px; }
+.conclusion-text { font-size: 13px; color: var(--text); line-height: 1.6; }
 
-  /* ── FOOTER ── */
-  .footer {
-    padding: 28px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .footer-brand {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    color: var(--pink);
-    text-transform: uppercase;
-  }
-  .footer-meta {
-    font-size: 11px;
-    color: var(--muted);
-    text-align: right;
-  }
+/* FOLLOW/UNFOLLOW */
+.fu-info { font-size: 11px; color: var(--muted); margin-top: 16px; border-left: 2px solid var(--border); padding-left: 12px; line-height: 1.6; }
 
-  /* ── CHART INLINE ── */
-  .full-chart {
-    margin-bottom: 0;
-  }
-  
-  @media (max-width: 900px) {
-    .cover-kpis { grid-template-columns: repeat(3, 1fr); }
-    .charts-row { grid-template-columns: 1fr; }
-    .posts-grid { grid-template-columns: 1fr; }
-    .conclusions-grid { grid-template-columns: 1fr; }
-    .follows-grid { grid-template-columns: repeat(2, 1fr); }
-  }
+/* FOOTER */
+.footer { padding: 32px 0; text-align: center; }
+.footer p { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
+
+@media (max-width: 640px) {
+  .cover h1 { font-size: 28px; }
+  .cover-kpi { padding: 16px 18px; }
+  .charts-row { grid-template-columns: 1fr; }
+  .cover-kpis { flex-direction: column; align-items: center; }
+  .cover-kpi { border-left: none; border-top: 1px solid var(--border); width: 100%; }
+  .cover-kpi:first-child { border-top: none; }
+}
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════ COVER ══════════════════════════════════════════ -->
+<!-- COVER -->
 <div class="cover">
-  <p class="cover-brand">SOFÍA — Social Media Report</p>
-  <h1 class="cover-title">Reporte Semanal</h1>
-  <p class="cover-period">28 Sep – 4 Oct 2026</p>
-  <div class="cover-kpis">
-    <div class="cover-kpi ig">
-      <div class="label">IG Views</div>
-      <div class="value">739.7K</div>
-      <div class="sub">−36.9% WoW</div>
-    </div>
-    <div class="cover-kpi ig">
-      <div class="label">IG Eng. Rate</div>
-      <div class="value">0.43%</div>
-      <div class="sub">+26.7% WoW</div>
-    </div>
-    <div class="cover-kpi tt">
-      <div class="label">TikTok Views</div>
-      <div class="value">3.6K</div>
-      <div class="sub">−15.8% WoW</div>
-    </div>
-    <div class="cover-kpi tt">
-      <div class="label">TikTok ER</div>
-      <div class="value">1.59%</div>
-      <div class="sub">−3.0% WoW</div>
-    </div>
-    <div class="cover-kpi neutral">
-      <div class="label">Nuevos Seg.</div>
-      <div class="value">423</div>
-      <div class="sub">IG — −14.2% WoW</div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════ INSTAGRAM MÉTRICAS ═══════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-ig">Instagram</span>
-    <h2 class="section-title">Métricas de la Semana</h2>
-  </div>
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-label">Views</div>
-      <div class="kpi-value">739,673</div>
-      <div class="kpi-wow wow-down">▼ 36.9% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Likes</div>
-      <div class="kpi-value">2,872</div>
-      <div class="kpi-wow wow-down">▼ 16.0% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Comments</div>
-      <div class="kpi-value">44</div>
-      <div class="kpi-wow wow-up">▲ 69.2% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Saves</div>
-      <div class="kpi-value">117</div>
-      <div class="kpi-wow wow-down">▼ 55.3% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Shares</div>
-      <div class="kpi-value">166</div>
-      <div class="kpi-wow wow-down">▼ 43.3% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Nuevos Seg.</div>
-      <div class="kpi-value">423</div>
-      <div class="kpi-wow wow-down">▼ 14.2% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Eng. Rate</div>
-      <div class="kpi-value" style="color: var(--pink);">0.43%</div>
-      <div class="kpi-wow wow-up">▲ 26.7% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Posts</div>
-      <div class="kpi-value">6</div>
-      <div class="kpi-wow wow-neutral">sem. ant.: 6 posts</div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════ TENDENCIA IG ═══════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-ig">Instagram</span>
-    <h2 class="section-title">Tendencia 4 Semanas & Mix Formatos</h2>
-  </div>
-  <div class="charts-row">
-    <div class="chart-box">
-      <h3>Views Semanales — 4 Semanas</h3>
-      <div class="chart-container" style="height: 220px;">
-        <canvas id="igTrendChart"></canvas>
+  <div class="container">
+    <div class="cover-logo">SofÃ­a Â· Reporte Semanal Social Media</div>
+    <h1>13 â 19 OCT 2026</h1>
+    <div class="cover-subtitle">Semana 42 Â· Generado el 20 Oct 2026</div>
+    <div class="cover-kpis">
+      <div class="cover-kpi">
+        <div class="cover-kpi-label">Views Instagram</div>
+        <div class="cover-kpi-value ig">718.8K</div>
+        <div class="cover-kpi-badge badge-down">â¼ 31.6% vs sem. ant.</div>
+      </div>
+      <div class="cover-kpi">
+        <div class="cover-kpi-label">ER Instagram</div>
+        <div class="cover-kpi-value ig">0.43%</div>
+        <div class="cover-kpi-badge badge-up">â² 3.6% vs sem. ant.</div>
+      </div>
+      <div class="cover-kpi">
+        <div class="cover-kpi-label">Views TikTok</div>
+        <div class="cover-kpi-value tt">5.2K</div>
+        <div class="cover-kpi-badge badge-down">â¼ 30.0% vs sem. ant.</div>
+      </div>
+      <div class="cover-kpi">
+        <div class="cover-kpi-label">ER TikTok</div>
+        <div class="cover-kpi-value tt">1.48%</div>
+        <div class="cover-kpi-badge badge-down">â¼ 13.4% vs sem. ant.</div>
+      </div>
+      <div class="cover-kpi">
+        <div class="cover-kpi-label">Nuevos Seguidores IG</div>
+        <div class="cover-kpi-value gold">+374</div>
+        <div class="cover-kpi-badge badge-down">â¼ 22.6% vs sem. ant.</div>
       </div>
     </div>
-    <div class="chart-box">
-      <h3>Mix de Formatos</h3>
-      <div class="chart-container" style="height: 220px;">
+  </div>
+</div>
+
+<!-- 1. INSTAGRAM METRICS -->
+<div class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">01</span>
+      <span class="section-title">MÃ©tricas Instagram Â· @sofiasarkany</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Views Totales</div>
+        <div class="kpi-val" style="color:var(--pink)">718.8K</div>
+        <div class="kpi-wow badge-down">â¼ 31.6% vs sem. ant.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Likes</div>
+        <div class="kpi-val">2,696</div>
+        <div class="kpi-wow badge-down">â¼ 32.1%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Comentarios</div>
+        <div class="kpi-val">72</div>
+        <div class="kpi-wow badge-up">â² 75.6%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Guardados</div>
+        <div class="kpi-val">104</div>
+        <div class="kpi-wow badge-down">â¼ 32.0%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Compartidos</div>
+        <div class="kpi-val">205</div>
+        <div class="kpi-wow badge-up">â² 15.8%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Engagement Rate</div>
+        <div class="kpi-val" style="color:var(--gold)">0.43%</div>
+        <div class="kpi-wow badge-up">â² 3.6% vs sem. ant.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Nuevos Seguidores</div>
+        <div class="kpi-val">374</div>
+        <div class="kpi-wow badge-down">â¼ 22.6%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Posts Publicados</div>
+        <div class="kpi-val">7</div>
+        <div class="kpi-wow" style="color:var(--muted)">6 Carruseles Â· 1 Reel</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. TENDENCIA INSTAGRAM -->
+<div class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">02</span>
+      <span class="section-title">Tendencia Instagram Â· 4 Semanas</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="charts-row">
+      <div class="chart-box">
+        <h3>Views Semanales</h3>
+        <canvas id="igTrendChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Mix de Formatos</h3>
         <canvas id="igFormatChart"></canvas>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════ FOLLOWS & UNFOLLOWS ═══════════════════════════════════ -->
+<!-- 3. FOLLOWS & UNFOLLOWS -->
 <div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-aud">Audiencia</span>
-    <h2 class="section-title">Follows & Unfollows — Diario</h2>
-  </div>
-  <div class="follows-grid kpi-grid" style="margin-bottom: 20px;">
-    <div class="kpi-card">
-      <div class="kpi-label">Total Follows</div>
-      <div class="kpi-value" style="color: var(--pink);">423</div>
-      <div class="kpi-wow wow-neutral">nuevos seguidores</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">03</span>
+      <span class="section-title">Follows &amp; Unfollows Â· sofiasarkany</span>
+      <div class="section-line"></div>
     </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Unfollows Est.</div>
-      <div class="kpi-value" style="color: var(--down);">533</div>
-      <div class="kpi-wow wow-neutral">desfollows estimados</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Neto Acumulado</div>
-      <div class="kpi-value" style="color: var(--down);">−110</div>
-      <div class="kpi-wow wow-down">semana negativa</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Peor Día</div>
-      <div class="kpi-value" style="color: var(--down);">28/09</div>
-      <div class="kpi-wow wow-neutral">neto: −27</div>
-    </div>
-  </div>
-  <div class="chart-box full-chart">
-    <h3>Follows / Unfollows estimados / Neto — 28 Sep · 4 Oct</h3>
-    <div class="chart-container" style="height: 220px;">
-      <canvas id="followsChart"></canvas>
-    </div>
-  </div>
-  <p class="follows-note" style="margin-top: 16px;">
-    ★ Nota metodológica: Los unfollows son estimados. Se calculan como: follows_and_unfollows (total de movimientos) − new_followers (follows netos del día). Esta cifra puede incluir cuentas que abandonaron Instagram, por lo que es una estimación conservadora del churn real.
-  </p>
-</div>
-
-<!-- ═══════════════════════════════════ TOP 3 POSTS IG ═══════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-ig">Instagram</span>
-    <h2 class="section-title">Top 3 Posts por Views</h2>
-  </div>
-  <div class="posts-grid">
-
-    <!-- #1 -->
-    <div class="post-card">
-      <div class="post-rank">1</div>
-      <img class="post-thumb" src="https://scontent-fra5-1.cdninstagram.com/v/t51.82787-15/831542633_18646494484062198_2779711252153981408_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=1bj0Hv-k4FoQ7kNvwEefB7H&_nc_oc=AdrkhwNbspHUP-uBcDvD8KmT6cI6LLFB-j43b3UxK9HJJT191GHfMgUHKNRIZ2Aw83A&_nc_zt=23&_nc_ht=scontent-fra5-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=AzVOIa4bhhq8ZxVD2D545w&oh=00_AQPmrq0RR37UbhMPk2-sMk1MZm-6A9a09EOnyknzzmU3qw&oe=6ACAC8FA" alt="Post #1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div class="post-thumb-placeholder" style="display:none;"><span>🏹</span></div>
-      <div class="post-info">
-        <span class="post-type-badge badge-carousel">Carousel</span>
-        <p class="post-caption">Mom needs Moms, la fuerza de maternar juntas 🪽🏹 Elegí el regalo de mamá & te llega a tiempo para su día. Shop now 🩷</p>
-        <div class="post-stats">
-          <div class="post-stat"><span class="stat-val">155.7K</span><span class="stat-key">Views</span></div>
-          <div class="post-stat"><span class="stat-val">1,029</span><span class="stat-key">Likes</span></div>
-          <div class="post-stat"><span class="stat-val">26</span><span class="stat-key">Coment.</span></div>
-          <div class="post-stat"><span class="stat-val">11</span><span class="stat-key">Saves</span></div>
+    <div class="charts-row">
+      <div class="chart-box">
+        <h3>EvoluciÃ³n Diaria</h3>
+        <canvas id="fuChart"></canvas>
+      </div>
+      <div class="kpi-grid" style="margin-bottom:0; align-content:start;">
+        <div class="kpi-card">
+          <div class="kpi-label">Total Follows</div>
+          <div class="kpi-val" style="color:var(--pink)">374</div>
         </div>
-        <a class="post-link" href="https://www.instagram.com/p/DeCtPtAkUSu/" target="_blank">Ver post →</a>
+        <div class="kpi-card">
+          <div class="kpi-label">Unfollows Estimados</div>
+          <div class="kpi-val" style="color:var(--down)">419</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Neto Acumulado</div>
+          <div class="kpi-val" style="color:var(--down)">â45</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Peor DÃ­a</div>
+          <div class="kpi-val" style="font-size:18px;">18/10</div>
+          <div class="kpi-wow" style="color:var(--down)">Neto â26</div>
+        </div>
       </div>
     </div>
-
-    <!-- #2 -->
-    <div class="post-card">
-      <div class="post-rank">2</div>
-      <img class="post-thumb" src="https://scontent-fra5-1.cdninstagram.com/v/t51.82787-15/828480290_18645240232062198_5665874637441971470_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=CFlMrPewLTEQ7kNvwH4bqFp&_nc_oc=Adp8ymy2lQJH06LyOm0tzIkXYu-CPLbEHhgvzDVe-eQ9glpUZAma-UmiGTKA5xv7284&_nc_zt=23&_nc_ht=scontent-fra5-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=AzVOIa4bhhq8ZxVD2D545w&oh=00_AQO6-RRFl4OvXLrZ3Hr1-iCkomVWyhLX_IiJT7ptLq-NdA&oe=6ACABF9D" alt="Post #2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div class="post-thumb-placeholder" style="display:none;"><span>🎀</span></div>
-      <div class="post-info">
-        <span class="post-type-badge badge-carousel">Carousel</span>
-        <p class="post-caption">We love classic prints 🎀🪽🏹 Todos los items disponibles en la web & locales.</p>
-        <div class="post-stats">
-          <div class="post-stat"><span class="stat-val">35.8K</span><span class="stat-key">Views</span></div>
-          <div class="post-stat"><span class="stat-val">335</span><span class="stat-key">Likes</span></div>
-          <div class="post-stat"><span class="stat-val">1</span><span class="stat-key">Coment.</span></div>
-          <div class="post-stat"><span class="stat-val">23</span><span class="stat-key">Saves</span></div>
-        </div>
-        <a class="post-link" href="https://www.instagram.com/p/Dd2AI9DH4XM/" target="_blank">Ver post →</a>
-      </div>
-    </div>
-
-    <!-- #3 -->
-    <div class="post-card">
-      <div class="post-rank">3</div>
-      <img class="post-thumb" src="https://scontent-fra3-2.cdninstagram.com/v/t51.82787-15/833388053_18646476475062198_5864764525310167574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ispl3OBQCvYQ7kNvwEDRPYj&_nc_oc=Adq5di-MlFLQebSh3e1uI0YLKt7jQkaY-AIrtstmibxQ-rjBpwsqF4_YbojCIB26BRA&_nc_zt=23&_nc_ht=scontent-fra3-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=AzVOIa4bhhq8ZxVD2D545w&oh=00_AQOQsWKaovueiXb93YM02ZGS_rpAZ2ue2KYDds7Pbj-RLQ&oe=6ACAC801" alt="Post #3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div class="post-thumb-placeholder" style="display:none;"><span>🪽</span></div>
-      <div class="post-info">
-        <span class="post-type-badge badge-carousel">Carousel</span>
-        <p class="post-caption">El día de la madre en Sofía 🪽🏹❤️ El mejor regalo. Shop now!</p>
-        <div class="post-stats">
-          <div class="post-stat"><span class="stat-val">27.4K</span><span class="stat-key">Views</span></div>
-          <div class="post-stat"><span class="stat-val">310</span><span class="stat-key">Likes</span></div>
-          <div class="post-stat"><span class="stat-val">1</span><span class="stat-key">Coment.</span></div>
-          <div class="post-stat"><span class="stat-val">9</span><span class="stat-key">Saves</span></div>
-        </div>
-        <a class="post-link" href="https://www.instagram.com/p/Dd_c4O2ERHY/" target="_blank">Ver post →</a>
-      </div>
-    </div>
-
+    <p class="fu-info">
+      Los unfollows son estimados: follows_and_unfollows (API Meta) â new_followers del dÃ­a. El dato del 19/10 fue excluido por estar incompleto.
+      La mÃ©trica follows_and_unfollows incluye cuentas que te siguieron y cuentas que dejaron de seguirte o abandonaron Instagram en el perÃ­odo.
+    </p>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════ TIKTOK MÉTRICAS ═══════════════════════════════════ -->
+<!-- 4. TOP 3 POSTS INSTAGRAM -->
 <div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-tt">TikTok</span>
-    <h2 class="section-title">Métricas de la Semana</h2>
-  </div>
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-label">Views</div>
-      <div class="kpi-value">3,584</div>
-      <div class="kpi-wow wow-down">▼ 15.8% vs sem. ant.</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">04</span>
+      <span class="section-title">Top 3 Posts Instagram</span>
+      <div class="section-line"></div>
     </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Likes</div>
-      <div class="kpi-value">54</div>
-      <div class="kpi-wow wow-down">▼ 14.3% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Comments</div>
-      <div class="kpi-value">1</div>
-      <div class="kpi-wow wow-neutral">sem. ant.: 0</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Shares</div>
-      <div class="kpi-value">2</div>
-      <div class="kpi-wow wow-down">▼ 71.4% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Eng. Rate</div>
-      <div class="kpi-value" style="color: var(--tiktok);">1.59%</div>
-      <div class="kpi-wow wow-down">▼ 3.0% vs sem. ant.</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Nuevos Videos</div>
-      <div class="kpi-value">1</div>
-      <div class="kpi-wow wow-neutral">publicado Sep 30</div>
+    <div class="posts-grid">
+      <div class="post-card">
+        <div class="post-rank">1</div>
+        <div class="post-thumb" style="background:#1a1a1a; justify-content: center; display:flex; align-items:center;"><span style="font-size:18px;">ð</span></div>
+        <div class="post-info">
+          <div class="post-type">Carrusel Â· 16 Oct</div>
+          <div class="post-caption">NEW IN! Sandalia Cirel ð perfecta para que te acompaÃ±e todo el verano. Hoy freeshiping!</div>
+          <div class="post-stats">
+            <span><strong>56,177</strong> views</span>
+            <span><strong>608</strong> likes</span>
+            <span><strong>36</strong> saves</span>
+            <span><strong>64</strong> shares</span>
+          </div>
+          <a class="post-link" href="https://www.instagram.com/p/DekBVBokUCh/" target="_blank">Ver post â</a>
+        </div>
+      </div>
+      <div class="post-card">
+        <div class="post-rank">2</div>
+        <div class="post-thumb" style="background:#1a1a1a; justify-content: center; display:flex; align-items:center;"><span style="font-size:18px;">ð</span></div>
+        <div class="post-info">
+          <div class="post-type">Carrusel Â· 13 Oct</div>
+          <div class="post-caption">Clarita en su primer dÃ­a de la madre ððª½ð¹ El regalo perfecto existe. Shop now!</div>
+          <div class="post-stats">
+            <span><strong>40,727</strong> views</span>
+            <span><strong>485</strong> likes</span>
+            <span><strong>13</strong> saves</span>
+            <span><strong>5</strong> shares</span>
+          </div>
+          <a class="post-link" href="https://www.instagram.com/p/DecZ0FukZzy/" target="_blank">Ver post â</a>
+        </div>
+      </div>
+      <div class="post-card">
+        <div class="post-rank">3</div>
+        <div class="post-thumb"><img src="https://scontent-fra3-2.cdninstagram.com/v/t51.82787-15/851829067_18651708055062198_2908865003609148559_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=5JqWl1MK6LAQ7kNvwEc2pKt&_nc_oc=Adoe4me0vf6kDU7xgr9LuAkvGmL_mafAcZ8G0oMZbHfAoyCtfwauZafpxUzYYSS6iws&_nc_zt=23&_nc_ht=scontent-fra3-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=yc1iZ5cDagYj37AmdVZ7YQ&oh=00_AQMoGmuZeomKwZmQ5h_TRzZuS7gBw3azvUBYlxZpHOfXNA&oe=6ADD336A" alt="Reel thumbnail" onerror="this.parentElement.innerHTML='ð¬'"></div>
+        <div class="post-info">
+          <div class="post-type">Reel Â· 15 Oct</div>
+          <div class="post-caption">THE YES LIST â­ï¸ Un recorrido en nuestro local de Alcorta con @delfipallucchini</div>
+          <div class="post-stats">
+            <span><strong>24,860</strong> views</span>
+            <span><strong>319</strong> likes</span>
+            <span><strong>29</strong> saves</span>
+            <span><strong>28</strong> shares</span>
+          </div>
+          <a class="post-link" href="https://www.instagram.com/reel/DehzYnUOvEe/" target="_blank">Ver reel â</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════ TENDENCIA TIKTOK ═══════════════════════════════════ -->
+<!-- 5. TIKTOK METRICS -->
 <div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-tt">TikTok</span>
-    <h2 class="section-title">Tendencia 4 Semanas</h2>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">05</span>
+      <span class="section-title">MÃ©tricas TikTok Â· sofia.sarkany</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Views Totales</div>
+        <div class="kpi-val" style="color:var(--tiktok)">5,206</div>
+        <div class="kpi-wow badge-down">â¼ 30.0% vs sem. ant.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Likes</div>
+        <div class="kpi-val">76</div>
+        <div class="kpi-wow badge-down">â¼ 36.7%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Comentarios</div>
+        <div class="kpi-val">0</div>
+        <div class="kpi-wow" style="color:var(--muted)">Sin actividad</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Compartidos</div>
+        <div class="kpi-val">1</div>
+        <div class="kpi-wow badge-down">â¼ 50.0%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Engagement Rate</div>
+        <div class="kpi-val" style="color:var(--gold)">1.48%</div>
+        <div class="kpi-wow badge-down">â¼ 13.4%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Videos Publicados</div>
+        <div class="kpi-val">1</div>
+        <div class="kpi-wow" style="color:var(--muted)">vs 1 sem. ant.</div>
+      </div>
+    </div>
   </div>
-  <div class="chart-box full-chart">
-    <h3>Views Semanales — 4 Semanas</h3>
-    <div class="chart-container" style="height: 220px;">
+</div>
+
+<!-- 6. TENDENCIA TIKTOK -->
+<div class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">06</span>
+      <span class="section-title">Tendencia TikTok Â· 4 Semanas</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="chart-box" style="max-width: 600px;">
+      <h3>Views Semanales TikTok</h3>
       <canvas id="ttTrendChart"></canvas>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════ TOP 3 TIKTOK ═══════════════════════════════════ -->
+<!-- 7. TOP VIDEOS TIKTOK -->
 <div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-tt">TikTok</span>
-    <h2 class="section-title">Top 3 Videos por Views (Acumulado)</h2>
-  </div>
-  <div class="posts-grid">
-
-    <!-- TK #1 -->
-    <div class="post-card">
-      <div class="post-rank tt-rank">1</div>
-      <img class="post-thumb" src="https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/osaFgADYA4CmfIIVSQLeDCAtxCMk6uIqjTGeIV~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=fdc9bfa4&x-expires=1791374400&x-signature=ylvyQhGUyuAjziGMr6rAhsKvNDo%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover" alt="TK #1" style="object-fit: cover;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div class="post-thumb-placeholder" style="display:none;"><span>🔥</span></div>
-      <div class="post-info">
-        <span class="post-type-badge badge-tiktok">TikTok · Sep 8</span>
-        <p class="post-caption">Verano hot vibes 🥵❤️‍🔥 @Lolita</p>
-        <div class="post-stats">
-          <div class="post-stat"><span class="stat-val">3,472</span><span class="stat-key">Views</span></div>
-          <div class="post-stat"><span class="stat-val">90</span><span class="stat-key">Likes</span></div>
-          <div class="post-stat"><span class="stat-val">3</span><span class="stat-key">Shares</span></div>
-        </div>
-        <a class="post-link tt-link" href="https://www.tiktok.com/@sofia.sarkany/video/7683150121495710996" target="_blank">Ver video →</a>
-      </div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">07</span>
+      <span class="section-title">Top Videos TikTok</span>
+      <div class="section-line"></div>
     </div>
-
-    <!-- TK #2 -->
-    <div class="post-card">
-      <div class="post-rank tt-rank">2</div>
-      <img class="post-thumb" src="https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/ogVBYWalAkJCLB4BAHiB1qP0I5E2dVPIEPi0a~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=00d65ffc&x-expires=1791374400&x-signature=UdDtEYRZ6rU9MjjIIA59nj4Cywc%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my&s=TIKTOK_FOR_DEVELOPER&sc=cover&biz_tag=tt_video" alt="TK #2" style="object-fit: cover;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div class="post-thumb-placeholder" style="display:none;"><span>💋</span></div>
-      <div class="post-info">
-        <span class="post-type-badge badge-tiktok">TikTok · Sep 16</span>
-        <p class="post-caption">dream dress 💋❤️‍🔥 ideal para año nuevo @Lolita</p>
-        <div class="post-stats">
-          <div class="post-stat"><span class="stat-val">1,537</span><span class="stat-key">Views</span></div>
-          <div class="post-stat"><span class="stat-val">93</span><span class="stat-key">Likes</span></div>
-          <div class="post-stat"><span class="stat-val">3</span><span class="stat-key">Shares</span></div>
+    <div class="posts-grid">
+      <div class="post-card">
+        <div class="post-rank">1</div>
+        <div class="post-thumb"><img src="https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oAMR5eLQsgG01rJAc8zAeEIFrhgxGhgGQTDffF~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=661153e2&x-expires=1792584000&x-signature=FR9zDqmwgONkiEEsMlgdnFnMmKs%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover" alt="TikTok thumb" onerror="this.parentElement.innerHTML='ðµ'"></div>
+        <div class="post-info">
+          <div class="post-type" style="color:var(--tiktok)">Video Â· 15 Oct Â· 58s</div>
+          <div class="post-caption">Falta poquito para el dia de la madre, no te cuelguesss!!!</div>
+          <div class="post-stats">
+            <span><strong>2,246</strong> views</span>
+            <span><strong>40</strong> likes</span>
+            <span><strong>2</strong> shares</span>
+          </div>
+          <a class="post-link" href="https://www.tiktok.com/@sofia.sarkany/video/7696929052636056839" target="_blank" style="color:var(--tiktok)">Ver video â</a>
         </div>
-        <a class="post-link tt-link" href="https://www.tiktok.com/@sofia.sarkany/video/7686258230573436181" target="_blank">Ver video →</a>
       </div>
-    </div>
-
-    <!-- TK #3 -->
-    <div class="post-card">
-      <div class="post-rank tt-rank">3</div>
-      <img class="post-thumb" src="https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oUb8rItaq0B43AceB9FEgJDsEnARjIDQQQfgcv~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=eed5630f&x-expires=1791374400&x-signature=%2Fm6ETvoxAHD3ASYUuDgl30Cw1OI%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover" alt="TK #3" style="object-fit: cover;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div class="post-thumb-placeholder" style="display:none;"><span>❤️‍🔥</span></div>
-      <div class="post-info">
-        <span class="post-type-badge badge-tiktok">TikTok · Sep 7</span>
-        <p class="post-caption">Lanzamiento IN YOUR DREAMS SS27 ❤️‍🔥 @Lolita</p>
-        <div class="post-stats">
-          <div class="post-stat"><span class="stat-val">1,205</span><span class="stat-key">Views</span></div>
-          <div class="post-stat"><span class="stat-val">59</span><span class="stat-key">Likes</span></div>
-          <div class="post-stat"><span class="stat-val">0</span><span class="stat-key">Shares</span></div>
+      <div class="post-card" style="opacity:0.5;">
+        <div class="post-rank">â</div>
+        <div class="post-thumb" style="background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:11px;">Sin video</div>
+        <div class="post-info">
+          <div class="post-type" style="color:var(--muted)">Solo 1 video publicado esta semana</div>
+          <div class="post-caption" style="color:var(--muted)">Para habilitar un ranking de top 3 videos se necesita mayor frecuencia de publicaciÃ³n en TikTok.</div>
         </div>
-        <a class="post-link tt-link" href="https://www.tiktok.com/@sofia.sarkany/video/7682844827171573013" target="_blank">Ver video →</a>
       </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════ BENCHMARK ═══════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-bm">Benchmark</span>
-    <h2 class="section-title">Competencia — Semana 28 Sep · 4 Oct</h2>
-  </div>
-  <table class="bm-table">
-    <thead>
-      <tr>
-        <th>Cuenta</th>
-        <th>Seguidores</th>
-        <th>Posts Semana</th>
-        <th>Avg Likes/Post</th>
-        <th>Avg Comments/Post</th>
-        <th>ER est. (likes+coment / seg.)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="highlight">
-        <td><span class="acct-name sofia">SOFÍA</span></td>
-        <td>599,850</td>
-        <td>6</td>
-        <td>372</td>
-        <td>6</td>
-        <td>0.063%</td>
-      </tr>
-      <tr>
-        <td><span class="acct-name">kosiuko</span></td>
-        <td>851,369</td>
-        <td>6</td>
-        <td>1,598</td>
-        <td>41</td>
-        <td>0.192%</td>
-      </tr>
-      <tr>
-        <td><span class="acct-name">mariacherargentina</span></td>
-        <td>630,113</td>
-        <td>4</td>
-        <td>17,583 ★</td>
-        <td>53</td>
-        <td>2.80% ★</td>
-      </tr>
-      <tr>
-        <td><span class="acct-name">lovelydenim</span></td>
-        <td>187,818</td>
-        <td>25</td>
-        <td>149</td>
-        <td>5</td>
-        <td>0.082%</td>
-      </tr>
-    </tbody>
-  </table>
-  <p style="font-size:11px; color: var(--muted); margin-bottom: 24px;">★ mariacherargentina publicó un post viral (68K likes) que eleva artificialmente su promedio semanal.</p>
-  <div class="chart-box full-chart">
-    <h3>Avg Likes por Post (sin viral mariacherargentina)</h3>
-    <div class="chart-container" style="height: 180px;">
-      <canvas id="bmChart"></canvas>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════ CONCLUSIONES ═══════════════════════════════════ -->
+<!-- 8. BENCHMARK -->
 <div class="section">
-  <div class="section-header">
-    <span class="section-tag tag-bm">Estrategia</span>
-    <h2 class="section-title">Conclusiones Accionables</h2>
-  </div>
-  <div class="conclusions-grid">
-    <div class="conclusion-card">
-      <div class="conclusion-num">01</div>
-      <div class="conclusion-title">Reactivar Reels</div>
-      <div class="conclusion-text">El 100% del contenido IG esta semana fue carousel. Introducir al menos 2 reels por semana para recuperar reach orgánico y revertir la caída de views.</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">08</span>
+      <span class="section-title">Benchmark Competidoras</span>
+      <div class="section-line"></div>
     </div>
-    <div class="conclusion-card">
-      <div class="conclusion-num">02</div>
-      <div class="conclusion-title">Capitalizar Día de la Madre</div>
-      <div class="conclusion-text">El post del 3/10 logró 155.7K views con enfoque emocional. Mantener el calendario estacional y repetir el formato "ocasión especial + beneficio" durante octubre/noviembre.</div>
-    </div>
-    <div class="conclusion-card">
-      <div class="conclusion-num">03</div>
-      <div class="conclusion-title">Reducir Churn de Audiencia</div>
-      <div class="conclusion-text">El neto semanal fue −110 seguidores IG. Implementar CTAs de follow más explícitos en stories, reels y colaboraciones para compensar el desbalance.</div>
-    </div>
-    <div class="conclusion-card">
-      <div class="conclusion-num">04</div>
-      <div class="conclusion-title">Aumentar Frecuencia TikTok</div>
-      <div class="conclusion-text">Solo 1 video publicado en TikTok esta semana vs. 5+ en semanas de mayor reach. Establecer mínimo 3–4 videos semanales con reutilización de contenido IG.</div>
-    </div>
-    <div class="conclusion-card">
-      <div class="conclusion-num">05</div>
-      <div class="conclusion-title">Analizar Playbook Kosiuko</div>
-      <div class="conclusion-text">Kosiuko logra avg 1.598 likes/post con una base similar de seguidores. Estudiar su frecuencia de carousel vs. video y sus categorías de contenido para adaptar a SOFÍA.</div>
+    <table class="bench-table">
+      <thead>
+        <tr>
+          <th>Cuenta</th>
+          <th>Seguidores</th>
+          <th>Posts sem.</th>
+          <th>Avg Likes/Post</th>
+          <th>Avg Comentarios/Post</th>
+          <th>ER Est. (sobre seg.)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="bench-name">mariacherargentina</td>
+          <td>631,248</td>
+          <td>5</td>
+          <td>927</td>
+          <td>30</td>
+          <td>0.152%</td>
+        </tr>
+        <tr>
+          <td class="bench-name">kosiuko</td>
+          <td>851,499</td>
+          <td>3</td>
+          <td>505</td>
+          <td>19</td>
+          <td>0.062%</td>
+        </tr>
+        <tr>
+          <td class="bench-name">lovelydenim</td>
+          <td>190,824</td>
+          <td>18</td>
+          <td>72</td>
+          <td>2</td>
+          <td>0.039%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="chart-box" style="max-width:500px; margin-top:16px;">
+      <h3>Avg Likes por Post</h3>
+      <canvas id="benchChart"></canvas>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+<!-- 9. CONCLUSIONES -->
+<div class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">09</span>
+      <span class="section-title">Conclusiones Accionables</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="conclusions-grid">
+      <div class="conclusion-card">
+        <div class="conclusion-num">01</div>
+        <div class="conclusion-text"><strong>Activar reels.</strong> El Ãºnico reel de la semana (THE YES LIST) generÃ³ el ER mÃ¡s alto del perÃ­odo con 319 likes, 29 saves y 28 shares sobre 24.8K views. Pasar de 1 a 3 reels semanales para capitalizar el algoritmo de distribuciÃ³n orgÃ¡nica.</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="conclusion-num">02</div>
+        <div class="conclusion-text"><strong>TikTok: cadencia mÃ­nima.</strong> Con solo 1 video publicado y 5.2K views semanales, el canal estÃ¡ en modo vegetativo. Meta: 3â4 videos por semana con contenido nativo (tendencias de audio, transiciones, behind-the-scenes).</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="conclusion-num">03</div>
+        <div class="conclusion-text"><strong>Audiencia neta negativa (â45).</strong> El DÃ­a de la Madre generÃ³ contenido saturado (4 posts temÃ¡ticos) que acelerÃ³ unfollows. Diversificar la grilla con contenido de producto editorial y lifestyle para retener audiencia existente.</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="conclusion-num">04</div>
+        <div class="conclusion-text"><strong>Sandalia Cirel como referente.</strong> El post de producto puro (Cirel) generÃ³ el mayor alcance semanal: 56.2K views, 64 shares, 36 saves. Replicar este formato con otros lanzamientos de producto: imagen limpia + beneficio directo.</div>
+      </div>
+      <div class="conclusion-card">
+        <div class="conclusion-num">05</div>
+        <div class="conclusion-text"><strong>Benchmark: aprender de mariacherargentina.</strong> Con 927 avg likes/post y ER de 0.15%, lidera la categorÃ­a con menor volumen que kosiuko. Su mix de lifestyle + producto + contenido personal es el modelo a adaptar para SofÃ­a.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <div class="footer">
-  <div class="footer-brand">SOFÍA</div>
-  <div class="footer-meta">
-    Reporte Semanal · 28 Sep – 4 Oct 2026<br>
-    Generado automáticamente · camezaga@rickysarkany.com
+  <div class="container">
+    <p>SOFÃA Â· Reporte Semanal Social Media Â· Semana 13â19 Oct 2026 Â· camezaga@rickysarkany.com</p>
+    <p style="margin-top:8px; font-size:10px; color:#444;">Datos: Windsor.ai Â· Instagram Organic API Â· TikTok Organic API Â· Instagram Public API</p>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════ SCRIPTS ═══════════════════════════════════ -->
 <script>
-const GOLD = '#E8C170';
-const PINK = '#E91E8C';
-const TIKTOK = '#FE2C55';
-const MUTED = '#666';
-const SURFACE = '#141414';
-const BORDER = '#2A2A2A';
-const TEXT = '#F0F0F0';
-const UP = '#4CAF50';
-const DOWN = '#F44336';
+const gold = '#E8C170';
+const pink = '#E91E8C';
+const tiktok = '#FE2C55';
+const muted = '#666';
+const border = '#2A2A2A';
+const up = '#4CAF50';
+const down = '#F44336';
+const text = '#F0F0F0';
 
-const baseOptions = (yLabel='') => ({
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: { display: false },
-    tooltip: {
-      backgroundColor: '#1e1e1e',
-      borderColor: BORDER,
-      borderWidth: 1,
-      titleColor: TEXT,
-      bodyColor: MUTED,
-    }
-  },
-  scales: {
-    x: {
-      grid: { color: BORDER },
-      ticks: { color: MUTED, font: { size: 11 } }
-    },
-    y: {
-      grid: { color: BORDER },
-      ticks: { color: MUTED, font: { size: 11 } }
-    }
-  }
-});
+Chart.defaults.color = muted;
+Chart.defaults.borderColor = border;
+Chart.defaults.font.family = "'Helvetica Neue', Helvetica, Arial, sans-serif";
+Chart.defaults.font.size = 11;
 
-// ── IG Trend (Line)
+// IG Trend
 new Chart(document.getElementById('igTrendChart'), {
   type: 'line',
   data: {
-    labels: ['7–13 Sep', '14–20 Sep', '21–27 Sep', '28 Sep–4 Oct'],
+    labels: ['22â28 Sep', '29 Sepâ5 Oct', '6â12 Oct', '13â19 Oct'],
     datasets: [{
-      data: [915774, 857778, 1172564, 739673],
-      borderColor: PINK,
+      label: 'Views IG',
+      data: [1150488, 795891, 1050557, 718788],
+      borderColor: pink,
       backgroundColor: 'rgba(233,30,140,0.08)',
-      borderWidth: 2,
-      pointBackgroundColor: PINK,
-      pointRadius: 5,
       fill: true,
-      tension: 0.3
+      tension: 0.3,
+      pointBackgroundColor: pink,
+      pointRadius: 4,
     }]
   },
   options: {
-    ...baseOptions('Views'),
-    plugins: {
-      ...baseOptions().plugins,
-      tooltip: {
-        ...baseOptions().plugins.tooltip,
-        callbacks: {
-          label: ctx => `${ctx.parsed.y.toLocaleString('es-AR')} views`
-        }
-      }
-    },
+    responsive: true,
+    plugins: { legend: { display: false } },
     scales: {
-      x: { grid: { color: BORDER }, ticks: { color: MUTED, font: { size: 11 } } },
-      y: { grid: { color: BORDER }, ticks: { color: MUTED, font: { size: 11 }, callback: v => (v/1000).toFixed(0)+'K' } }
+      y: {
+        grid: { color: border },
+        ticks: { callback: v => (v/1000).toFixed(0)+'K' }
+      },
+      x: { grid: { color: border } }
     }
   }
 });
 
-// ── IG Format (Donut)
+// IG Format donut
 new Chart(document.getElementById('igFormatChart'), {
   type: 'doughnut',
   data: {
-    labels: ['Carousel'],
+    labels: ['Carrusel', 'Reel', 'Imagen'],
     datasets: [{
-      data: [100],
-      backgroundColor: [PINK],
+      data: [6, 1, 0],
+      backgroundColor: [pink, gold, '#444'],
       borderColor: '#0C0C0C',
       borderWidth: 3
     }]
   },
   options: {
     responsive: true,
-    maintainAspectRatio: false,
-    cutout: '65%',
     plugins: {
       legend: {
-        display: true,
         position: 'bottom',
-        labels: { color: MUTED, font: { size: 11 }, padding: 12 }
-      },
-      tooltip: {
-        backgroundColor: '#1e1e1e',
-        borderColor: BORDER,
-        borderWidth: 1,
-        titleColor: TEXT,
-        bodyColor: MUTED,
-        callbacks: { label: ctx => `${ctx.label}: ${ctx.parsed}%` }
+        labels: { color: muted, boxWidth: 10, padding: 12 }
       }
     }
   }
 });
 
-// ── Follows Chart
-new Chart(document.getElementById('followsChart'), {
+// Follows & Unfollows
+new Chart(document.getElementById('fuChart'), {
   type: 'line',
   data: {
-    labels: ['28/09', '29/09', '30/09', '01/10', '02/10', '03/10', '04/10'],
+    labels: ['13/10','14/10','15/10','16/10','17/10','18/10'],
     datasets: [
       {
         label: 'Follows',
-        data: [69, 64, 61, 58, 56, 49, 66],
-        borderColor: PINK,
-        backgroundColor: 'rgba(233,30,140,0.05)',
-        borderWidth: 2,
-        pointBackgroundColor: PINK,
+        data: [60, 65, 65, 74, 59, 51],
+        borderColor: pink,
+        backgroundColor: 'transparent',
+        tension: 0.3,
+        pointBackgroundColor: pink,
         pointRadius: 4,
-        fill: true,
-        tension: 0.3
       },
       {
         label: 'Unfollows est.',
-        data: [96, 71, 73, 80, 52, 75, 86],
-        borderColor: DOWN,
-        borderDash: [5, 4],
+        data: [67, 78, 75, 57, 65, 77],
+        borderColor: down,
         backgroundColor: 'transparent',
-        borderWidth: 2,
-        pointBackgroundColor: DOWN,
+        borderDash: [5, 4],
+        tension: 0.3,
+        pointBackgroundColor: down,
         pointRadius: 4,
-        fill: false,
-        tension: 0.3
       },
       {
         label: 'Neto',
-        data: [-27, -7, -12, -22, 4, -26, -20],
-        borderColor: MUTED,
-        borderDash: [3, 3],
+        data: [-7, -13, -10, 17, -6, -26],
+        borderColor: '#888',
         backgroundColor: 'transparent',
-        borderWidth: 1.5,
-        pointBackgroundColor: MUTED,
+        borderDash: [2, 4],
+        tension: 0.3,
+        pointBackgroundColor: '#888',
         pointRadius: 3,
-        fill: false,
-        tension: 0.3
       }
     ]
   },
   options: {
     responsive: true,
-    maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: true,
         position: 'bottom',
-        labels: { color: MUTED, font: { size: 11 }, padding: 16, boxWidth: 24 }
-      },
-      tooltip: {
-        backgroundColor: '#1e1e1e',
-        borderColor: BORDER,
-        borderWidth: 1,
-        titleColor: TEXT,
-        bodyColor: MUTED,
+        labels: { color: muted, boxWidth: 10, padding: 10 }
       }
     },
     scales: {
-      x: { grid: { color: BORDER }, ticks: { color: MUTED, font: { size: 11 } } },
-      y: { grid: { color: BORDER }, ticks: { color: MUTED, font: { size: 11 } } }
+      y: { grid: { color: border } },
+      x: { grid: { color: border } }
     }
   }
 });
 
-// ── TikTok Trend (Bar)
+// TikTok trend bar
 new Chart(document.getElementById('ttTrendChart'), {
   type: 'bar',
   data: {
-    labels: ['7–13 Sep', '14–20 Sep', '21–27 Sep', '28 Sep–4 Oct'],
+    labels: ['22â28 Sep', '29 Sepâ5 Oct', '6â12 Oct', '13â19 Oct'],
     datasets: [{
-      data: [7834, 3714, 4256, 3584],
-      backgroundColor: [
-        'rgba(254,44,85,0.4)',
-        'rgba(254,44,85,0.4)',
-        'rgba(254,44,85,0.4)',
-        'rgba(254,44,85,0.85)'
-      ],
-      borderColor: TIKTOK,
-      borderWidth: 1,
-      borderRadius: 3,
+      label: 'Views TikTok',
+      data: [4147, 4665, 7436, 5206],
+      backgroundColor: ['rgba(254,44,85,0.5)','rgba(254,44,85,0.5)','rgba(254,44,85,0.9)','rgba(254,44,85,0.5)'],
+      borderColor: tiktok,
+      borderWidth: 1
     }]
   },
   options: {
-    ...baseOptions(),
-    plugins: {
-      ...baseOptions().plugins,
-      tooltip: {
-        ...baseOptions().plugins.tooltip,
-        callbacks: {
-          label: ctx => `${ctx.parsed.y.toLocaleString('es-AR')} views`
-        }
-      }
-    },
+    responsive: true,
+    plugins: { legend: { display: false } },
     scales: {
-      x: { grid: { color: BORDER }, ticks: { color: MUTED, font: { size: 11 } } },
-      y: { grid: { color: BORDER }, ticks: { color: MUTED, font: { size: 11 } } }
+      y: { grid: { color: border } },
+      x: { grid: { color: border } }
     }
   }
 });
 
-// ── Benchmark (Horizontal Bar)
-new Chart(document.getElementById('bmChart'), {
+// Benchmark
+new Chart(document.getElementById('benchChart'), {
   type: 'bar',
   data: {
-    labels: ['SOFÍA', 'kosiuko', 'lovelydenim'],
+    labels: ['mariacherargentina', 'kosiuko', 'lovelydenim'],
     datasets: [{
-      data: [372, 1598, 149],
-      backgroundColor: [PINK, 'rgba(232,193,112,0.6)', 'rgba(232,193,112,0.35)'],
-      borderColor: [PINK, GOLD, GOLD],
-      borderWidth: 1,
-      borderRadius: 3,
+      label: 'Avg likes/post',
+      data: [927, 505, 72],
+      backgroundColor: [gold, 'rgba(232,193,112,0.5)', 'rgba(232,193,112,0.3)'],
+      borderColor: gold,
+      borderWidth: 1
     }]
   },
   options: {
     indexAxis: 'y',
     responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        backgroundColor: '#1e1e1e',
-        borderColor: BORDER,
-        borderWidth: 1,
-        titleColor: TEXT,
-        bodyColor: MUTED,
-        callbacks: {
-          label: ctx => `${ctx.parsed.x.toLocaleString('es-AR')} likes/post avg`
-        }
-      }
-    },
+    plugins: { legend: { display: false } },
     scales: {
-      x: { grid: { color: BORDER }, ticks: { color: MUTED, font: { size: 11 } } },
-      y: { grid: { color: 'transparent' }, ticks: { color: TEXT, font: { size: 12, weight: '500' } } }
+      x: { grid: { color: border } },
+      y: { grid: { color: border } }
     }
   }
 });
